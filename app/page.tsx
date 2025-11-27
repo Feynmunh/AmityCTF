@@ -74,7 +74,7 @@ export default function Home() {
         {/* Headline */}
         <div className="text-center mb-12">
           <h1 className="text-6xl md:text-7xl font-black text-black leading-tight mb-6">
-           SOLVE THE MYSTERY                                                                                                                             
+           Solve The Mystery                                                                                                                            
                                                                                                                                          
           </h1>
         </div>
