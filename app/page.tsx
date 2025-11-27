@@ -27,6 +27,10 @@ export default function Home() {
     router.replace("/login")
   }
 
+  const handleStartChallenge = () => {
+    router.push("/challenge")
+  }
+
   if (!isReady) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -76,7 +80,10 @@ export default function Home() {
         </div>
 
         {/* CTA Button */}
-        <button className="text-2xl rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 font-semibold px-[34px] py-[23px] border border-muted bg-card-foreground text-[rgba(246,205,160,1)] border-none">
+        <button
+          onClick={handleStartChallenge}
+          className="text-2xl rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 font-semibold px-[34px] py-[23px] border border-muted bg-card-foreground text-[rgba(246,205,160,1)] border-none"
+        >
           Start Challange
         </button>
       </main>
