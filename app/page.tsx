@@ -43,7 +43,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col overflow-hidden">
+    <div className="min-h-screen bg-background flex flex-col overflow-hidden relative">
       {/* Header */}
       <header className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between px-4 sm:px-8 pt-8 pb-8 sm:pb-12 relative z-10">
         {/* Logo */}
@@ -70,7 +70,7 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-center px-4 sm:px-8 pb-20 sm:pb-40 text-center">
+      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-8 pb-20 sm:pb-40 text-center">
         {/* Headline */}
         <div className="mb-10 sm:mb-12">
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-black leading-tight mb-4">
@@ -91,7 +91,12 @@ export default function Home() {
       </main>
 
       {/* Wave Shape Bottom */}
-      <svg className="fixed bottom-0 left-0 right-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg
+        className="fixed bottom-0 left-0 right-0 pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        aria-hidden="true"
+      >
         <path
           fill="#F6CDA0"
           fillOpacity="1"
