@@ -65,17 +65,17 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-black flex items-center justify-center px-6 py-12">
+    <div className="min-h-screen bg-background text-black flex items-center justify-center px-4 sm:px-6 py-10 sm:py-12">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground">Capture the Flag</p>
-          <h1 className="text-4xl md:text-5xl font-black leading-tight">Welcome Back</h1>
-          <p className="text-base text-muted-foreground mt-3">Log in to continue solving the mystery.</p>
+          <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-muted-foreground">Capture the Flag</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">Welcome Back</h1>
+          <p className="text-sm sm:text-base text-muted-foreground mt-3">Log in to continue solving the mystery.</p>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 bg-card text-card-foreground border border-primary/20 rounded-[32px] shadow-2xl p-8"
+          className="space-y-6 bg-card text-card-foreground border border-primary/20 rounded-[32px] shadow-2xl p-6 sm:p-8"
         >
           <div className="space-y-2">
             <label htmlFor="email" className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
@@ -112,12 +112,12 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={isDisabled}
-            className="w-full rounded-full bg-card-foreground text-[#F6CDA0] text-xl font-semibold py-4 shadow-lg shadow-black/10 hover:shadow-2xl hover:-translate-y-0.5 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full rounded-full bg-card-foreground text-[#F6CDA0] text-lg sm:text-xl font-semibold py-3.5 sm:py-4 shadow-lg shadow-black/10 hover:shadow-2xl hover:-translate-y-0.5 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {busy ? "Checking credentials..." : "Enter the Arena"}
           </button>
 
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-center text-xs sm:text-sm text-muted-foreground">
             Need an account?{" "}
             <Link href="/signup" className="font-semibold text-black underline-offset-4 hover:underline">
               Create one now

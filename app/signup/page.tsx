@@ -76,18 +76,20 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-black relative overflow-hidden flex items-center justify-center px-6 py-12">
+    <div className="min-h-screen bg-background text-black relative overflow-hidden flex items-center justify-center px-4 sm:px-6 py-10 sm:py-12">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(0,0,0,0.08),_transparent_55%)]" aria-hidden />
       <div className="relative z-10 w-full max-w-2xl">
         <div className="mb-10 text-center">
-          <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground">Capture the Flag</p>
-          <h1 className="text-4xl md:text-5xl font-black leading-tight">Create Your Commander Profile</h1>
-          <p className="text-base text-muted-foreground mt-3">Sign up to join the hunt and unlock the main experience.</p>
+          <p className="text-xs sm:text-sm uppercase tracking-[0.4em] text-muted-foreground">Capture the Flag</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">Create Your Commander Profile</h1>
+          <p className="text-sm sm:text-base text-muted-foreground mt-3">
+            Sign up to join the hunt and unlock the main experience.
+          </p>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="grid gap-6 bg-card text-card-foreground border border-primary/15 rounded-[36px] shadow-2xl p-10"
+          className="grid gap-6 bg-card text-card-foreground border border-primary/15 rounded-[36px] shadow-2xl p-6 sm:p-10"
         >
           <div className="grid gap-2">
             <label htmlFor="name" className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
@@ -141,12 +143,12 @@ export default function SignupPage() {
           <button
             type="submit"
             disabled={isDisabled}
-            className="w-full rounded-full bg-card-foreground text-[#F6CDA0] text-xl font-semibold py-4 shadow-lg shadow-black/10 hover:shadow-2xl hover:-translate-y-0.5 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full rounded-full bg-card-foreground text-[#F6CDA0] text-lg sm:text-xl font-semibold py-3.5 sm:py-4 shadow-lg shadow-black/10 hover:shadow-2xl hover:-translate-y-0.5 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {busy ? "Setting up your profile..." : "Join the Mission"}
           </button>
 
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-center text-xs sm:text-sm text-muted-foreground">
             Already enlisted?{" "}
             <Link href="/login" className="font-semibold text-black underline-offset-4 hover:underline">
               Head to login

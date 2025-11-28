@@ -45,12 +45,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="flex justify-between items-center px-8 pt-8 pb-12 relative z-10">
+      <header className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between px-4 sm:px-8 pt-8 pb-8 sm:pb-12 relative z-10">
         {/* Logo */}
-        <img src="/images/acc-logo.png" alt="acc logo" className="h-16 w-auto" />
+        <img src="/images/acc-logo.png" alt="acc logo" className="h-12 sm:h-16 w-auto" />
 
         {/* User Profile Icon */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4 self-stretch md:self-auto justify-end">
           <button
             className="w-12 h-12 rounded-full bg-[#F6CDA0] flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 cursor-pointer"
             aria-label="User profile menu"
@@ -62,7 +62,7 @@ export default function Home() {
           </button>
           <button
             onClick={handleSignOut}
-            className="px-5 py-3 rounded-full border border-black/10 bg-card text-black text-sm font-semibold tracking-[0.2em] uppercase shadow-md hover:-translate-y-0.5 hover:shadow-lg transition"
+            className="px-4 sm:px-5 py-2.5 sm:py-3 rounded-full border border-black/10 bg-card text-black text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase shadow-md hover:-translate-y-0.5 hover:shadow-lg transition"
           >
             Sign Out
           </button>
@@ -70,19 +70,21 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-center px-8 pb-40">
+      <main className="flex-1 flex flex-col items-center justify-center px-4 sm:px-8 pb-20 sm:pb-40 text-center">
         {/* Headline */}
-        <div className="text-center mb-12">
-          <h1 className="text-6xl md:text-7xl font-black text-black leading-tight mb-6">
-           Solve The Mystery                                                                                                                            
-                                                                                                                                         
+        <div className="mb-10 sm:mb-12">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-black leading-tight mb-4">
+            Solve the Mystery
           </h1>
+          <p className="text-base sm:text-lg text-black/80 max-w-2xl mx-auto">
+            Track clues, decode intel, and race to capture every flag. Your first mission awaits below.
+          </p>
         </div>
 
         {/* CTA Button */}
         <button
           onClick={handleStartChallenge}
-          className="text-2xl rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 font-semibold px-[34px] py-[23px] border border-muted bg-card-foreground text-[rgba(246,205,160,1)] border-none"
+          className="w-full sm:w-auto text-xl sm:text-2xl rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 font-semibold px-8 sm:px-12 py-4 sm:py-6 border border-muted bg-card-foreground text-[rgba(246,205,160,1)] border-none"
         >
           Start Challange
         </button>
